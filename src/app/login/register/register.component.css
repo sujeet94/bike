@@ -1,0 +1,10 @@
+.register-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* align-items: center; */
+}
+.error{
+    font-size: 12px;
+    color: red;
+}

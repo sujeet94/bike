@@ -1,0 +1,14 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+
+};
+.login-field{
+}
+.register-class{
+    margin: 2px;
+    text-align: right;
+    font-size: 15px;
+
+}

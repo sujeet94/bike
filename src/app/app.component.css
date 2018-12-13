@@ -1,0 +1,25 @@
+.example-container {
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .example-sidenav-content {
+    /* display: flex; */
+    /* height: 100%; */
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+
+  .example-sidenav {
+    padding: 20px;
+    width:15%
+  }
+  @media screen and (max-width: 767px) {
+    .example-sidenav {
+         width:80%
+      }
+  }
+  /* .title_class{
+
+  } */
+

@@ -1,0 +1,28 @@
+<form class="register-container" (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <mat-form-field class="login-field">
+    <input matInput placeholder="Name" id="name" name="name" ngModel required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Mobile No" id="mob" name="number" type="tel" required ngModel>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email Id" id="email" name="email" email ngModel #email="ngModel">
+    <mat-error *ngIf="email.invalid">enter a valid email</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" name="password1" [(ngModel)]="password1"
+      (ngModelChange)="matchPassword()" required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Confirm password" [type]="hide ? 'password' : 'text'" name="password2" [(ngModel)]="password2"
+      (ngModelChange)="matchPassword()" required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+  <span class="error">{{passwordMatch}}</span>
+  <button mat-raised-button type="submit" color="primary" [disabled]="!f.valid">Register</button>
+</form>
